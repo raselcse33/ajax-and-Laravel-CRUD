@@ -37,27 +37,6 @@
             </div>
           </div>
         </div>
-
-        <div class="row">
-                <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($lists as $list)
-                          <tr>
-                          <td>{{$list->name}}</td>
-                          <td>{{$list->email}}</td>
-                          <td>{{$list->phone}}</td>
-                          </tr>
-                          @endforeach
-                        </tbody>
-                      </table>
-        </div>
     
     </div>
 </div>
