@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Contact;
 use App\second;
 use App\Thirt;
+use App\Name;
 
 class ContactController extends Controller
 {
@@ -39,5 +40,27 @@ class ContactController extends Controller
        }
       
       return view('result', compact('datas'));
+    }
+
+    public function multiple()
+    {
+      return view('multiple');
+    }
+
+    public function insert(Request $request)
+    {
+      $name = $request->name;
+      $des = $request->des;
+      
+      foreach($name as $key => $no)
+      {
+          $input['name'] = $name[$key];
+          $input['des'] = $des[$key];
+      
+          Name::create($input);
+      
+      }
+    
+       return response()->json($input);
     }
 }

@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('contact','ContactController@createContact')->name('create.contact');
 Route::post('contact_store','ContactController@storeContact')->name('contact.store');
 Route::get('result/{id}','ContactController@result')->name('name');
+Route::get('multiple','ContactController@multiple')->name('multiple');
+Route::post('insert','ContactController@insert')->name('insert.store');
